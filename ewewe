@@ -1,34 +1,3 @@
-local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
-
----ui
-local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
-local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
-local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
-
----ui costomize
-local Window = Library:CreateWindow({
-    Title = 'Demon-Ware ︳DEV',
-    Center = true,
-    AutoShow = true,
-})
-
---tabs
-local Tabs = {
-    Combat = Window:AddTab('Combat'),
-    Visuals = Window:AddTab('Visuals'),
-    Misc = Window:AddTab('Misc'),
-    ['UI Settings'] = Window:AddTab('UI Settings'),
-}
-
-local LeftGroupBox = Tabs.Combat:AddLeftGroupbox('AimLock')
-
-LeftGroupBox:AddToggle('togglewoggle', {
-    Text = 'enable',
-    Default = false, -- Default value (true / false)
-    Tooltip = 'enables aimlock', -- Information shown when you hover over the toggle
-    Callback = function(Value)
-        local Camera = workspace.CurrentCamera
-
 _G.CircleSides = 100
 _G.CircleColor = Color3.fromRGB(75, 0, 130)
 _G.CircleTransparency = 0.5
